@@ -5,7 +5,7 @@ import Review from "./Review";
 
 const Home = () => {
   return (
-    <div className="max-w-screen-xl mx-auto">
+    <div className="">
       <Helmet>
         <title> Home | 10 Minute School Promo Codes</title>
         <link rel="canonical" href="https://www.tacobell.com/" />

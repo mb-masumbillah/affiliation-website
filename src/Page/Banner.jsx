@@ -1,117 +1,273 @@
 import { Link } from "react-router-dom";
 
+
+
+// const cards = [
+//   {
+//     title: "HSC\n26",
+//     subtitle: "HSC ২৬",
+//     color: "blue",
+//     icon: "🏆",
+//   },
+//   {
+//     title: "HSC\n27",
+//     subtitle: "HSC ২৭",
+//     color: "blue",
+//     icon: "🎯",
+//   },
+//   {
+//     title: "HSC\n28",
+//     subtitle: "HSC ২৮",
+//     color: "blue",
+//     icon: "🎒",
+//   },
+//   {
+//     title: "SSC\n27",
+//     subtitle: "দশম শ্রেণি",
+//     color: "orange",
+//     icon: "📜",
+//     badge: "২০২৬ সালে ভর্তি চলছে",
+//     borderColor: "border-orange-400/60",
+//   },
+//   {
+//     title: "CLASS\n9",
+//     subtitle: "৯ম শ্রেণি",
+//     color: "green",
+//     icon: "🎓",
+//     badge: "২০২৬ সালে ভর্তি চলছে",
+//     borderColor: "border-green-400/60",
+//   },
+//   {
+//     title: "CLASS\n6,7,8",
+//     subtitle: "৬ষ্ঠ, ৭ম, ৮ম শ্রেণি",
+//     color: "green",
+//     icon: "🎒",
+//     badge: "২০২৬ সালে ভর্তি চলছে",
+//     borderColor: "border-green-400/60",
+//   },
+// ];
+
+
+const cards = [
+
+  {
+    title: "hsc-28-pcmb.jpg",
+    subtitle: "Science ",
+    color: "green",
+    icon: "📜",
+    badge: "Pre-Book করুন",
+    link: "https://10ms.io/WF45mc"
+  },
+  {
+    title: "hsc-28-arts.jpg",
+    subtitle: "Humanities",
+    color: "orange",
+    icon: "📜",
+    badge: "Pre-Book করুন",
+    borderColor: "border-orange-400/60",
+        link: "https://10ms.io/QF45Wd"
+  },
+  {
+    title: "hsc-28-buniess.jpg",
+    subtitle: "Business Studies",
+    color: "blue",
+    icon: "📜",
+    badge: "Pre-Book করুন",
+    borderColor: "border-green-400/60",
+    link:"https://10ms.io/KF45WM"
+  },
+  {
+    title: "hsc-28-bei.jpg",
+    subtitle: "Bangla - English - ICT",
+    color: "blue",
+    icon: "📜",
+    badge: "Pre-Book করুন",
+    borderColor: "border-blue-400/60",
+    link: "https://10ms.io/TF45Rd"
+  },
+
+];
+
+const innerCardColors = {
+  blue: "from-sky-400 to-blue-600",
+  orange: "from-orange-400 to-orange-600",
+  green: "from-green-400 to-green-600",
+};
+
 const Banner = () => {
+
   const phoneNumber = "+8801726374365";
   return (
-    <div className=" w-full h-full flex justify-between items-center lg:pb-10 flex-col-reverse lg:flex-row">
-      <div className="absolute inset-0 -z-10 md:block hidden ">
-        <div className="absolute top-1/3 left-1/2 lg:w-[1024px] h-[400px] bg-gradient-to-r from-[#e15ce183] via-[#0bff5c46] to-[#e15ce183] rounded-full blur-3xl transform -translate-x-1/2 opacity-35 -translate-y-1/2"></div>
-      </div>
+    <div className="min-h-screen bg-black text-white overflow-hidden relative flex flex-col items-center justify-center px-4 py-16">
+
+      {/* Stars dot-pattern */}
+      <div
+        className="absolute inset-0 opacity-20"
+        style={{
+          backgroundImage: "radial-gradient(white 1px, transparent 1px)",
+          backgroundSize: "38px 38px",
+        }}
+      />
+
+      {/* Red planet glow */}
+      <div
+        className="absolute top-0 left-1/2 -translate-x-1/2 pointer-events-none"
+        style={{
+          width: "900px",
+          height: "480px",
+          background:
+            "radial-gradient(ellipse at center, rgba(180,20,20,0.55) 0%, rgba(120,10,10,0.3) 45%, transparent 70%)",
+          borderRadius: "50%",
+          top: "-120px",
+          filter: "blur(2px)",
+        }}
+      />
+
+      {/* Planet arc border */}
+      <div
+        className="absolute left-1/2 -translate-x-1/2 pointer-events-none"
+        style={{
+          width: "900px",
+          height: "420px",
+          top: "60px",
+          borderTop: "1.5px solid rgba(220,80,80,0.45)",
+          borderRadius: "50%",
+        }}
+      />
+
       {/* Content */}
-      <div className="text-black space-y-2 lg:pl-8 px-1 mt-16">
-        <h1 className="lg:text-4xl text-lg md:text-2xl font-bold text-black inline-block bg-clip-text">
-          10MS Discount – প্রোমো কোড ব্যবহার করুন
-        </h1>
-        <p className="font-bold lg:pt-5 md:text-lg text-xs">
-          আপনার পছন্দের কোর্সে বিশেষ ছাড় পেতে নিচের নির্দেশনা অনুসরণ করুন : 😊
-        </p>
-        {/* Steps */}
-        <div className="space-y-2 text-left text-xs md:text-base rounded-lg pt-3">
-          <p>
-            👉 <strong>{'"ডিসকাউন্ট"'}</strong> অপশনে ক্লিক করুন।
+      <div className="relative z-10 w-full max-w-7xl flex flex-col items-center">
+
+        {/* Heading */}
+        <div className="text-center mb-14">
+          <h1
+            className="text-5xl md:text-7xl font-black leading-tight"
+            style={{
+              background: "linear-gradient(90deg,#fbbf24 0%,#f9a8d4 45%,#67e8f9 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+            }}
+          >
+            HSC-28 Pre-Booking চলছে
+          </h1>
+          <p className="mt-4 text-lg md:text-2xl text-gray-200 leading-5">
+            সব ক্লাসের একমাত্র সমাধান - এক প্ল্যাটফর্মে!
           </p>
-          <p>
-            👉 <strong>{'"কোর্সটি কিনুন"'}</strong> অপশনে ক্লিক করুন।
-          </p>
-          <p>👉 লগইন করতে ফোন নম্বর বা ই-মেইল ব্যবহার করুন।</p>
-          <p>
-            👉 <strong>{'"অর্ডার কনফার্ম"'}</strong> করুন।
-          </p>
-          <p>👉 পেমেন্ট সম্পন্ন করুন (বিকাশ, রকেট, নগদ, কার্ড ইত্যাদি)।</p>
-          <p>
-            👉 পেমেন্ট কমপ্লিট হলে <strong>{'"কোর্স শুরু করুন"'}</strong> অপশনে
-            ক্লিক করুন।
+          <p className="mt-4 text-lg md:text-2xl text-gray-200 leading-5">
+            সেরা শিক্ষক, সেরা কন্টেন্ট - তোমার সাফল্য নিশ্চিত!
           </p>
         </div>
 
-        {/* Help Section */}
-        <div className="text-lg flex flex-col items-center md:max-w-xl max-w-md">
-          <div className="flex lg:flex-nowrap gap-2 pt-2">
-            <Link target="_blank" to="https://www.facebook.com/share/1AVaDAZxwG/" className="bg-black p-1 gap-2 hover:text-blue-400 text-xs lg:text-base text-white lg:px-2 lg:py-1 rounded-md flex items-center">
-              <img
-                src="https://img.icons8.com/?size=100&id=uLWV5A9vXIPu&format=png&color=000000"
-                alt=""
-                className="lg:w-8 w-4"
-              />
-              <span>Facebook</span>
-            </Link>
-            <Link target="_blank" to="https://www.facebook.com/profile.php?id=61558601160130" className="bg-black p-1 gap-2 hover:text-blue-400 text-xs lg:text-base text-white lg:px-2 lg:py-1 rounded-md flex items-center">
-              <img
-                src="https://img.icons8.com/?size=100&id=uLWV5A9vXIPu&format=png&color=000000"
-                alt=""
-                className="lg:w-8 w-4"
-              />
-              <span>Page</span>
-            </Link>
-            <Link target="_blank" to="https://www.facebook.com/profile.php?id=61571193290759" className="bg-black p-1 gap-2 hover:text-blue-400 text-xs lg:text-base text-white lg:px-2 lg:py-1 rounded-md flex items-center">
-              <img
-                src="https://img.icons8.com/?size=100&id=uLWV5A9vXIPu&format=png&color=000000"
-                alt=""
-                className="lg:w-10 w-4"
-              />
-              <span>Page</span>
-            </Link>
-            <Link target="_blank" to="https://facebook.com/groups/1553731405509665/" className="bg-black p-1 gap-2 hover:text-blue-400 text-xs lg:text-base text-white lg:px-2 lg:py-1 rounded-md flex items-center">
-              <img
-                src="https://img.icons8.com/?size=100&id=uLWV5A9vXIPu&format=png&color=000000"
-                alt=""
-                className="lg:w-10 w-4"
-              />
-              <span>Group</span>
-            </Link>
-          </div>
-          <div className="flex lg:flex-nowrap lg:gap-4 gap-1 p-2 justify-center items-center">
-            <a
-              href={`https://wa.me/${phoneNumber}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-black p-1 gap-2 hover:text-green-500 text-white lg:px-4 lg:py-1 text-xs lg:text-base rounded-md flex items-center"
-            >
-              <img
-                src="https://img.icons8.com/?size=100&id=QkXeKixybttw&format=png&color=000000"
-                alt=""
-                className="lg:w-8 w-4"
-              />
-              <span> whatsApp করুন: 01726374365</span>
-            </a>
+        {/* Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-7 -mt-5 mb-14">
+          {cards.map((card, i) => (
+            <Link to={card?.link} key={i} className="flex flex-col items-center">
 
-            <Link target="_blank" to="https://www.youtube.com/@user-ty1eg1lf1o" className="bg-black p-1 lg:gap-2 hover:text-red-400 text-white px-2 text-xs rounded-md flex items-center">
-              <img
-                src="https://img.icons8.com/?size=100&id=9a46bTk3awwI&format=png&color=000000"
-                alt=""
-                className="lg:w-10 w-4"
-              />
-              <span>Youtube</span>
+              {/* Glass outer card */}
+              <div
+                className={`
+                  relative w-[300px] h-[250px] rounded-[32px] p-[13px]
+                  bg-white/[0.08] backdrop-blur-xl
+                  border ${card.borderColor ?? "border-white/20"}
+                  hover:scale-105 hover:bg-white/[0.13]
+                  transition-all duration-300 cursor-pointer
+                  overflow-hidden
+                `}
+                style={{
+                  boxShadow: "0 8px 32px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.15)",
+                }}
+              >
+                {/* Gloss sheen */}
+                <div
+                  className="absolute inset-0 rounded-[32px] pointer-events-none"
+                  style={{
+                    background:
+                      "linear-gradient(135deg, rgba(255,255,255,0.13) 0%, transparent 55%)",
+                  }}
+                />
+
+                {/* Inner coloured card */}
+                <div
+                  className={`
+                    rounded-[24px] h-[190px]
+                    bg-gradient-to-b ${innerCardColors[card.color]}
+                    flex flex-col items-center justify-center
+                    border border-white/10
+                    relative overflow-hidden
+                  `}
+
+                  style={{
+                    backgroundImage: `url(${card?.title})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "left center",
+                    backgroundRepeat: "no-repeat",
+                  }}
+                >
+
+
+
+                </div>
+
+                {/* Subtitle */}
+                <div className="flex items-center justify-center h-[44px]">
+                  <p
+                    className="text-[1.15rem] font-bold text-white/90"
+                    style={{ textShadow: "0 1px 4px rgba(0,0,0,0.5)" }}
+                  >
+                    {card.subtitle}
+                  </p>
+                </div>
+              </div>
+
+              {/* Admission badge */}
+              {card.badge && (
+                <div
+                  className="mt-4 px-5 py-[7px] rounded-full border border-orange-300/50"
+                  style={{
+                    background: "linear-gradient(90deg,#dc2626,#ea580c)",
+                    boxShadow: "0 4px 16px rgba(220,38,38,0.4)",
+                  }}
+                >
+                  <p className="text-xl font-semibold text-white whitespace-nowrap">
+                    {card.badge}
+                  </p>
+                </div>
+              )}
             </Link>
-          </div>
+          ))}
         </div>
+
       </div>
 
-      <div className="relative lg:-top-[156px] -top-[0px] pb-10 lg:pb-0 -z-50 lg:pr-8 pr-0">
-        <figure>
+      {/* Floating Buttons */}
+      <div className="fixed right-5 bottom-5 flex flex-col gap-4 z-50">
+
+
+        <a
+          href={`https://wa.me/${phoneNumber}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-14 h-14 text-2xl shadow-xl hover:scale-110 active:scale-95 transition-all flex items-center justify-center bg-green-600 rounded-full p-2 animate-bounce"
+        >
           <img
-            src="addmission.png"
+            src="https://img.icons8.com/?size=100&id=QkXeKixybttw&format=png&color=000000"
             alt=""
-            className="rounded-b-full lg:w-[20rem] w-[10rem]"
+            className="lg:w-10 md:w-14 w-6 cursor-pointer"
+            title="যোগাযোগ করুন +880 1726374365"
           />
-        </figure>
-        <figure className="absolute lg:top-[175px] lg:-left-[13px] left-[20px]">
+        </a>
+        <Link
+          target="_blank"
+          to="https://www.youtube.com/@user-ty1eg1lf1o"
+          className="w-14 h-14 text-2xl shadow-xl hover:scale-110 active:scale-95 transition-all flex items-center justify-center bg-green-600 rounded-full p-2 animate-bounce"
+        >
           <img
-            src="offer.png"
+            src="https://img.icons8.com/?size=100&id=9a46bTk3awwI&format=png&color=000000"
             alt=""
-            className="lg:w-96 w-32 origin-top animate-[swingBalanced_2s_ease-in-out_infinite]"
+            className="lg:w-10 md:w-14 w-6 cursor-pointer"
           />
-        </figure>
+        </Link>
       </div>
     </div>
   );
