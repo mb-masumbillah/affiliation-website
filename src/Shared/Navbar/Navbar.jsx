@@ -29,7 +29,7 @@ export default function Navbar() {
       >
         <div className="max-w-screen-xl mx-auto flex justify-between items-center">
           <Link to="/" className="lg:text-2xl font-bold text-black">
-            <img src="logo.png" alt="" className="w-36" />
+            <img src="logo2.png" alt="" className="w-36" />
           </Link>
 
           {/* Desktop Menu */}
